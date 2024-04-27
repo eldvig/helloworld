@@ -218,5 +218,97 @@ public class Main {
         float kristinaSalaryYearDiff = kristinaSalaryYear - kristinaSalaryYearOld;
         System.out.println("Кристина теперь получает " + kristinaSalary + " рублей. Годовой доход вырос на " + kristinaSalaryYearDiff + " рублей");
 
+            //homework4
+        // Условный оператор
+
+        // a == b Операция «Равно»
+        // a && b Операция «И»
+        // a || b Операция «ИЛИ»
+
+        //Побитовые операции  — https://neerc.ifmo.ru/wiki/index.php
+        //Тернарный оператор Java — примеры — https://java-blog.ru/osnovy/ternarnyy-operator-java
+        //Какие отличия битовых и логических операторов в Java — https://ru.stackoverflow.com/questions
+
+        //task 4.1
+        int age = 19;
+        System.out.println("Task 4.1:");
+        if (age >= 18){
+            System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
+        } else {
+            System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать");
+        }
+
+        //task 4.2
+        int weatherTemperature = 4;
+        System.out.println("Task 4.2:");
+        if (weatherTemperature < 5){
+            System.out.println("На улице " + weatherTemperature + " градусов, нужно надеть шапку");
+        } else {
+            System.out.println("На улице " + weatherTemperature + " градусов, можно идти без шапки");
+        }
+
+        //task 4.3
+        int vihicleSpeed = 55;
+        System.out.println("Task 4.3:");
+        if (vihicleSpeed > 60){
+            System.out.println("Если скорость " + vihicleSpeed + ", то придется заплатить штраф");
+        } else {
+            System.out.println("Если скорость " + vihicleSpeed + ", то можно ездить спокойно");
+        }
+
+        //task 4.4
+        int personAge = 18;
+        System.out.println("Task 4.4:");
+        if (personAge >= 2 && personAge <= 6){
+            System.out.println("Если возраст человека равен " + personAge + ", то ему нужно ходить в детский сад");
+        } else if (personAge >= 7 && personAge <= 17){
+            System.out.println("Если возраст человека равен " + personAge + ", то ему нужно ходить в школу");
+        } else if (personAge >= 18 && personAge <= 24){
+            System.out.println("Если возраст человека равен " + personAge + ", то ему нужно ходить в университет");
+        } else if (personAge > 24){
+            System.out.println("Если возраст человека равен " + personAge + ", то ему нужно ходить на работу");
+        }
+
+        //task 4.5
+        int childAge = 13;
+        boolean adultWithChild = true;
+        System.out.println("Task 4.5:");
+        if (childAge < 5){
+            System.out.println("Если возраст ребенка равен " + childAge + ", то ему нельзя кататься на аттракционе");
+        } else if (childAge >= 5 && childAge <= 14 && !adultWithChild){
+            System.out.println("Если возраст ребенка равен " + childAge + ", то ему нельзя кататься на аттракционе без сопровождения взрослого");
+        } else if (childAge >= 5 && childAge <= 14 && adultWithChild){
+            System.out.println("Если возраст ребенка равен " + childAge + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+        } else if (childAge > 14){
+            System.out.println("Если возраст ребенка равен " + childAge + ", то ему можно кататься на аттракционе");
+        }
+
+        //task 4.6
+        int personsVan = 59;
+        int totalPersonsVan = 102;
+        int totalPersonsVanSeat = 60;
+        System.out.println("Task 4.6:");
+        if (personsVan < totalPersonsVanSeat){
+            System.out.println("В вагоне ещё есть сидячие места");
+        } else if (personsVan < totalPersonsVan && personsVan > totalPersonsVanSeat){
+            System.out.println("В вагоне ещё есть стоячие места");
+        } else if (personsVan >= totalPersonsVan){
+            System.out.println("В вагоне нет мест");
+        }
+
+        //task 4.7
+        int one = 346;
+        int two = 345;
+        int three = 346;
+        System.out.println("Task 4.7:");
+        if (one > two && one > three){
+            System.out.println("Самое большое число " + one);
+        } else if (two > one && two > three){
+            System.out.println("Самое большое число " + two);
+        } else if (three > one && three > two){
+            System.out.println("Самое большое число " + three);
+        } else {
+            System.out.println("есть равные числа");
+        }
         }
     }
