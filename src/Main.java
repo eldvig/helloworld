@@ -310,5 +310,99 @@ public class Main {
         } else {
             System.out.println("есть равные числа");
         }
+
+            //homework5
+        // Условный оператор, урок 2
+
+        //Основы логики. Приоритет логических операций  — http://infbu.ru/uchebniki/logika/prioritet.html
+        //Is there a difference in removing the curly braces from If statements in java — https://stackoverflow.com/questions/15786949/is-there-a-difference-in-removing-the-curly-braces-from-if-statements-in-java
+        //Всё ли вы знаете про if? — https://habr.com/ru/articles/61323/
+
+        //task 5.1
+        int clientOS = 1;
+        System.out.println("Task 5.1:");
+        if (clientOS == 0){
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+
+        //task 5.2
+        //int clientOS = 1;
+        int clientDeviceYear = 2015;
+        System.out.println("Task 5.2:");
+        if (clientOS == 0 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015){
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+
+        //task 5.3
+        int year = 1984;
+        int overYear = (year - 1584) ;
+        int overYear4 = overYear / 4;
+        int overYear100 = overYear / 100;
+        int overYear400 = overYear / 400;
+        float overYear4f = overYear / 4f;
+        float overYear100f = overYear / 100f;
+        float overYear400f = overYear / 400f;
+        System.out.println("Task 5.3:");
+        if (year < 1584){
+            System.out.println(year + " год не является високостным");
+        } else if (overYear4 - overYear4f == 0 && overYear100 - overYear100f != 0 ) {
+            System.out.println(year + " год является високостным");
+        } else if (overYear100 - overYear100f == 0 && overYear400 - overYear400f != 0) {
+            System.out.println(year + " год не является високостным");
+        } else if (overYear400 - overYear400f == 0 ) {
+            System.out.println(year + " год является високостным");
+        }
+
+        //task 5.4
+        int deliveryDistance  = 95;
+        int delivery2Time20Km = 1;
+        int delivery2Time60Km = 2;
+        int delivery2Time100Km = 3;
+        System.out.println("Task 5.4:");
+        if (deliveryDistance > 100){
+            System.out.println("доставки нет");
+        } else if (deliveryDistance < 20 ) {
+            System.out.println("Потребуется дней: " + delivery2Time20Km);
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется дней: " + delivery2Time60Km);
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+            System.out.println("Потребуется дней: " + delivery2Time100Km);
+        }
+
+        //task 5.5
+        int monthNumber = 12;
+        System.out.println("Task 5.5:");
+        switch (monthNumber)  {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Месяц " + monthNumber + " - это вечна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Месяц " + monthNumber + " - это лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Месяц " + monthNumber + " - это осень");
+                break;
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Месяц " + monthNumber + " - это зима");
+                break;
+            default:
+                System.out.println("Месяц " + monthNumber + " - не существует");
+        }
         }
     }
