@@ -454,7 +454,7 @@ public class Main {
         int capital = 29000;
         int sumCapital = 0;
         System.out.println("Task 6.8:");
-        for (int i = 0; i <= 12; i = i + 1) {
+        for (int i = 0; i < 12; i = i + 1) {
             sumCapital = sumCapital + capital;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + sumCapital + " рублей.");
         }
@@ -463,7 +463,7 @@ public class Main {
         int capital12 = 29000;
         int sumCapital12 = 0;
         System.out.println("Task 6.9:");
-        for (int i = 0; i <= 12; i = i + 1) {
+        for (int i = 0; i < 12; i = i + 1) {
             sumCapital12 = sumCapital12 + sumCapital12/100;
             sumCapital12 = sumCapital12 + capital12;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + sumCapital12 + " рублей.");
