@@ -397,5 +397,84 @@ public class Main {
                 System.out.println("Месяц " + monthNumber + " - не существует");
                 break;
         }
+
+            //homework6
+        // Циклы for
+
+        //Java: Инкремент и декремент — https://code-basics.com/ru/languages/java/lessons/mutators
+        //Как правильно работать с преинкрементом и постинкрементом? - https://qna.habr.com/q/125631
+
+        //task 6.1
+        System.out.println("Task 6.1:");
+        for (int i = 1; i <= 10; i = i + 1) {
+            System.out.println(i);
+        }
+
+        //task 6.2
+        System.out.println("Task 6.2:");
+        for (int i = 10; i > 0; i = i - 1) {
+            System.out.println(i);
+        }
+
+        //task 6.3
+        System.out.println("Task 6.3:");
+        for (int i = 0; i <= 17; i = i + 2) {
+            System.out.println(i);
+        }
+
+        //task 6.4
+        System.out.println("Task 6.4:");
+        for (int i = 10; i >= -10; i = i - 1) {
+            System.out.println(i);
+        }
+
+        //task 6.5
+        System.out.println("Task 6.5:");
+        int overYear6 = 0;
+        for (int i = 1904; i <= 2096; i = i + 4) {
+            overYear6 = i - 1584;
+            if  ((overYear6%4 == 0 && overYear6%100 != 0) || overYear6%400 == 0){
+                System.out.println(i + " год является високосным");
+            }
+        }
+
+        //task 6.6
+        System.out.println("Task 6.6:");
+        for (int i = 7; i <= 98; i = i + 7) {
+            System.out.println(i);
+        }
+
+        //task 6.7
+        System.out.println("Task 6.7:");
+        for (int i = 1; i <= 512; i = i * 2) {
+            System.out.println(i);
+        }
+
+        //task 6.8
+        int capital = 29000;
+        int sumCapital = 0;
+        System.out.println("Task 6.8:");
+        for (int i = 0; i <= 12; i = i + 1) {
+            sumCapital = sumCapital + capital;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumCapital + " рублей.");
+        }
+
+        //task 6.9
+        int capital12 = 29000;
+        int sumCapital12 = 0;
+        System.out.println("Task 6.9:");
+        for (int i = 0; i <= 12; i = i + 1) {
+            sumCapital12 = sumCapital12 + sumCapital12/100;
+            sumCapital12 = sumCapital12 + capital12;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumCapital12 + " рублей.");
+        }
+
+        //task 6.10
+        int mathResult = 0;
+        System.out.println("Task 6.10:");
+        for (int i = 1; i <= 10; i = i + 1) {
+            mathResult = 2 * i;
+            System.out.println("2*" + i + "=" + mathResult);
+        }
         }
     }
