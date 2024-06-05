@@ -476,5 +476,112 @@ public class Main {
             mathResult = 2 * i;
             System.out.println("2*" + i + "=" + mathResult);
         }
+
+            //homework7
+        // Циклы while
+
+        //Разница между break и continue в программировании
+        // https://sky.pro/wiki/java/raznitsa-mezhdu-break-i-continue-v-programmirovanii/
+
+        //task 7.1
+        int myCapital = 15_000;
+        int sumMyCapital = 0;
+        int sumMyCapitalMonth = 0;
+        System.out.println("Task 7.1:");
+        while (sumMyCapital < 2_459_000) {
+            sumMyCapital = sumMyCapital + sumMyCapital/100;
+            sumMyCapital = sumMyCapital + myCapital;
+            sumMyCapitalMonth = sumMyCapitalMonth + 1;
+            System.out.println("Месяц " + sumMyCapitalMonth + ", сумма накоплений равна " + sumMyCapital + " рублей.");
+        }
+
+        //task 7.2
+        System.out.println("Task 7.2:");
+        int digit = 0;
+        while (digit <=10) {
+            digit = digit + 1;
+            System.out.print(digit + " ");
+        }
+        System.out.println();
+        for (; digit > 0; digit = digit - 1) {
+            System.out.print(digit + " ");
+        }
+
+        //task 7.3
+        System.out.println("Task 7.3:");
+        int citizenNow = 12_000_000;
+        int citizenBornPer1000 = 17;
+        int citizenBorn = 0;
+        int citizenDiePer1000 = 8;
+        int citizenDie = 0;
+        for (int i = 1; i <= 10; i = i + 1) {
+            citizenBorn = (citizenNow / 1000) * citizenBornPer1000;
+            citizenDie = (citizenNow / 1000) * citizenDiePer1000;
+            citizenNow = citizenNow + citizenBorn - citizenDie;
+            System.out.println ("Год " + i + ", численность населения составляет " + citizenNow);
+        }
+
+        //task 7.4
+        System.out.println("Task 7.4:");
+        int capitalVasiliy = 15_000;
+        int cnt_moths = 1;
+        while (capitalVasiliy <= 12_000_000) {
+            capitalVasiliy = capitalVasiliy + ((capitalVasiliy * 7)/ 100);
+            cnt_moths = cnt_moths + 1;
+            System.out.println ("Месяц " + cnt_moths + ", сумма вклада - " + capitalVasiliy);
+        }
+        System.out.println ("Чтобы накопить 12 000 000, Василию нужно " + cnt_moths + " месяцев");
+
+        //task 7.5
+        System.out.println("Task 7.5:");
+        int capitalVasiliy5 = 15_000;
+        int cnt_moths5 = 1;
+        while (capitalVasiliy5 <= 12_000_000) {
+            capitalVasiliy5 = ((capitalVasiliy5 * 7)/ 100) + capitalVasiliy5;
+            cnt_moths5 = cnt_moths5 + 1;
+            if (cnt_moths5%6 == 0) {
+                System.out.println("Месяц " + cnt_moths5 + ", сумма вклада - " + capitalVasiliy5);
+            }
+        }
+        System.out.println ("Чтобы накопить 12 000 000, Василию нужно " + cnt_moths5 + " месяцев");
+
+        //task 7.6
+        System.out.println("Task 7.6:");
+        int capitalVasiliy6 = 15_000;
+        int cnt_moths6 = 1;
+        while (cnt_moths6 <= 9 * 12) {
+            capitalVasiliy6 = ((capitalVasiliy6 * 7)/ 100) + capitalVasiliy6;
+            cnt_moths6 = cnt_moths6 + 1;
+            if (cnt_moths6%6 == 0) {
+                System.out.println("Месяц " + cnt_moths6 + ", сумма вклада - " + capitalVasiliy6);
+            }
+        }
+        System.out.println ("Через 9 лет Василий накопит " + capitalVasiliy6 + " рублей");
+
+        //task 7.7
+        System.out.println("Task 7.7:");
+        int firstFriday = 3;
+        int cntDay = 1;
+        while (cntDay <= 31) {
+            if ((cntDay == firstFriday) || (cntDay - firstFriday)%7 == 0) {
+                System.out.println("Сегодня пятница, " + cntDay + "-е число. Необходимо подготовить отчет");
+            }
+            cntDay = cntDay + 1;
+        }
+
+        //task 7.8
+        System.out.println("Task 7.8:");
+        int cometYear = 79;
+        int cntYear = 0;
+        int nowYear = 2024;
+        int startCntYear = 200;
+        int stopCntYear = 100;
+        do { if (cntYear%cometYear == 0 && cntYear >= nowYear - startCntYear && cntYear <= nowYear + stopCntYear) {
+            System.out.println(cntYear);
+        }
+            cntYear = cntYear + 1;
+        }
+        while (cntYear <= nowYear + stopCntYear) ;
+
         }
     }
