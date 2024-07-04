@@ -654,5 +654,14 @@ public class Main {
             }
             System.out.print(array3[k] + ", ");
         }
+
+        //task 8.4
+        System.out.println("Task 8.4:");
+        for (int n = 0; n < array1.length; n++) {
+            if (array1[n]%2 != 0){
+                array1[n] = array1[n] + 1;
+            }
+        }
+        System.out.println(Arrays.toString(array1));
         }
     }
