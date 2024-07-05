@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -583,5 +585,83 @@ public class Main {
         }
         while (cntYear <= nowYear + stopCntYear) ;
 
+
+            //homework8
+        // Массивы
+
+        //task 8.1
+        System.out.println("Task 8.1:");
+        int[] array1 = new int[3];
+        array1[0] = 1;
+        array1[1] = 2;
+        array1[2] = 3;
+        System.out.println(Arrays.toString(array1));
+
+        double[] array2 = {1.57, 7.654, 9.986};
+        System.out.println(Arrays.toString(array2));
+
+        char[] array3 = {'a', 'b', 'c', 'd'};
+        System.out.println(Arrays.toString(array3));
+
+        //task 8.2
+        System.out.println("Task 8.2:");
+        for (int i = 0; i < array1.length; i++) {
+            if (i == array1.length - 1){
+                System.out.println(array1[i]);
+                break;
+            }
+            System.out.print(array1[i] + ", ");
+        }
+
+        for (int j = 0; j < array2.length; j++) {
+            if (j == array2.length - 1){
+                System.out.println(array2[j]);
+                break;
+            }
+            System.out.print(array2[j] + ", ");
+        }
+
+        for (int k = 0; k < array3.length; k++) {
+            if (k == array3.length - 1){
+                System.out.println(array3[k]);
+                break;
+            }
+            System.out.print(array3[k] + ", ");
+        }
+
+        //task 8.3
+        System.out.println("Task 8.3:");
+        for (int i = array1.length - 1; i >= 0; i--) {
+            if (i == 0){
+                System.out.println(array1[i]);
+                break;
+            }
+            System.out.print(array1[i] + ", ");
+        }
+
+        for (int j = array2.length - 1; j >= 0; j--) {
+            if (j == 0){
+                System.out.println(array2[j]);
+                break;
+            }
+            System.out.print(array2[j] + ", ");
+        }
+
+        for (int k = array3.length - 1; k >= 0; k--) {
+            if (k == 0){
+                System.out.println(array3[k]);
+                break;
+            }
+            System.out.print(array3[k] + ", ");
+        }
+
+        //task 8.4
+        System.out.println("Task 8.4:");
+        for (int n = 0; n < array1.length; n++) {
+            if (array1[n]%2 != 0){
+                array1[n] = array1[n] + 1;
+            }
+        }
+        System.out.println(Arrays.toString(array1));
         }
     }
